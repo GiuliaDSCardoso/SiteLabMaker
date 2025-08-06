@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabMaker</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        body a{
+            text-decoration: none;
+        }
+        .container {
+            width: 100%; 
+            height: 100%; 
+            padding-top: 24px; 
+           
+            padding-right: 63px; 
+            background: #1C003B; 
+            overflow: hidden; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 132px; 
+            display: inline-flex;
+        }
+
+        .main-content {
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: center; 
+            gap: 91px; 
+            display: flex;
+        }
+
+        .header {
+            justify-content: center; 
+            align-items: center; 
+            gap: 595px; 
+            display: inline-flex;
+        }
+
+        .logo-container {
+            width: 163px; 
+            height: 30px; 
+            position: relative; 
+            overflow: hidden;
+        }
+
+        .logo-text {
+            width: 204px; 
+            height: 20px; 
+            left: 0px; 
+            top: 0px; 
+            position: absolute; 
+            color: white; 
+            font-size: 25px; 
+            font-family: 'Kantumruy Pro', sans-serif; 
+            font-weight: 500; 
+            word-wrap: break-word;
+        }
+
+        .nav {
+            padding-top: 1px; 
+            padding-bottom: 1px; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 37px; 
+            display: flex;
+        }
+        .nav a{
+            text-decoration: none;
+        }
+        .nav-link {
+            color: white; 
+            font-size: 22px; 
+            font-family: 'Karla', sans-serif; 
+            font-weight: 500; 
+            word-wrap: break-word;
+        }
+
+        .nav-link-about {
+            width: 72px; 
+            height: 20px;
+        }
+
+        .nav-link-contact {
+            width: 138px; 
+            height: 20px;
+        }
+
+        .admin-button {
+            width: 94px; 
+            height: 31px; 
+            padding: 10px; 
+            background: black; 
+            overflow: hidden; 
+            border-radius: 4px; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 10px; 
+            display: flex;
+        }
+
+        .admin-button-text {
+            width: 70px; 
+            height: 23px; 
+            color: white; 
+            font-size: 20px; 
+            font-family: 'Karla', sans-serif; 
+            font-weight: 400; 
+            word-wrap: break-word;
+        }
+
+        .content-section {
+            height: 610px; 
+            justify-content: flex-start; 
+            align-items: center; 
+            gap: 88px; 
+            display: inline-flex;
+        }
+
+        .actions-container {
+        
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: center; 
+            gap: 9px; 
+            display: inline-flex;
+        }
+
+        .actions-title {
+            align-self: stretch; 
+            transform: rotate(-1deg); 
+            transform-origin: top left; 
+            text-align: center; 
+            color: white; 
+            font-size: 32px; 
+            font-family: 'Yaldevi Colombo SemiBold', sans-serif; 
+            font-weight: 600; 
+            letter-spacing: 6.40px; 
+            word-wrap: break-word;
+        }
+
+        .actions-grid {
+            align-self: stretch; 
+            justify-content: flex-start; 
+            align-items: flex-end; 
+            gap: 18px; 
+            display: inline-flex;
+        }
+
+        .action-card {
+            position: relative;
+        }
+
+        .action-card-1 {
+            width: 130px; 
+            height: 157px;
+        }
+
+        .action-card-bg-1 {
+            width: 130px; 
+            height: 113px; 
+            left: 0px; 
+            top: 45px; 
+            position: absolute; 
+            background: rgb(243, 167, 73);
+        }
+
+        .action-card-content-1 {
+            width: 77px; 
+            height: 160px; 
+            left: 27px; 
+            top: 0px; 
+            position: absolute; 
+            overflow: hidden; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: center; 
+            gap: 6px; 
+            display: inline-flex;
+        }
+
+        .action-card-img-1 {
+            align-self: stretch; 
+            height: 85.86px;
+        }
+
+        .action-card-text {
+            align-self: stretch; 
+            color: white; 
+            font-size: 20px; 
+            font-family: 'Karla', sans-serif; 
+            font-weight: 400; 
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        .content-section a{
+            text-decoration: none;
+        }
+
+        .action-card-2 {
+            width: 131px; 
+            height: 172px;
+        }
+
+        .action-card-bg-2 {
+            width: 130px; 
+            height: 113px; 
+            left: 0px; 
+            top: 59px; 
+            position: absolute; 
+            background: rgba(111.44, 63.44, 143.44, 0.86);
+        }
+
+        .action-card-content-2 {
+            width: 131px; 
+            left: 0.50px; 
+            top: -0.25px; 
+            position: absolute; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: center; 
+            display: inline-flex;
+        }
+
+        .action-card-img-2 {
+            align-self: stretch; 
+            height: 114px;
+        }
+
+        .action-card-text-2 {
+            width: 130px;
+        }
+
+        .action-card-3 {
+            width: 130px; 
+            height: 173px;
+        }
+
+        .action-card-bg-3 {
+            width: 130px; 
+            height: 113px; 
+            left: 0px; 
+            top: 60px; 
+            position: absolute; 
+            background: #00C8FF;
+        }
+
+        .action-card-content-3 {
+            width: 116px; 
+            left: 7px; 
+            top: 0px; 
+            position: absolute; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            gap: 15px; 
+            display: inline-flex;
+        }
+
+        .action-card-img-3 {
+            align-self: stretch; 
+            height: 100.83px;
+        }
+
+        .action-card-4 {
+            width: 130px; 
+            height: 156px;
+        }
+
+        .action-card-bg-4 {
+            width: 130px; 
+            height: 113px; 
+            left: 0px; 
+            top: 43px; 
+            position: absolute; 
+            background: #FD6497;
+        }
+
+        .action-card-content-4 {
+            left: 18.50px; 
+            top: -0.25px; 
+            margin-right: 55px;
+            position: absolute; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-end; 
+            gap: 15px; 
+            display: inline-flex;
+        }
+
+
+        .action-card-img-4 {
+            width: 94px; 
+            height: 85px;
+        }
+
+        .image-section {
+            width: 538px; 
+            height: 598px; 
+            position: relative;
+        }
+
+        .image-background {
+            width: 545px; 
+            height: 628px; 
+            left: -7px; 
+            top: -12px; 
+            position: absolute;
+        }
+
+        .blur-circle-1 {
+            width: 414px; 
+            height: 414px; 
+            left: 116px; 
+            top: 0px; 
+            position: absolute; 
+            background: #B43E71; 
+            box-shadow: 263.5px 263.5px 263.5px; 
+            border-radius: 9999px; 
+            filter: blur(131.75px);
+        }
+
+        .blur-circle-2 {
+            width: 303px; 
+            height: 303px; 
+            left: 0px; 
+            top: 242px; 
+            position: absolute; 
+            background: #931CE2; 
+            box-shadow: 263.5px 263.5px 263.5px; 
+            border-radius: 9999px; 
+            filter: blur(131.75px);
+        }
+
+        .blur-circle-3 {
+            width: 303px; 
+            height: 303px; 
+            left: 242px; 
+            top: 325px; 
+            position: absolute; 
+            background: #FFA245; 
+            box-shadow: 263.5px 263.5px 263.5px; 
+            border-radius: 9999px; 
+            filter: blur(131.75px);
+        }
+
+        .main-image {
+            width: 769px; 
+            height: 817px; 
+            left: -61.50px; 
+            top: -92px; 
+            position: absolute;
+        }
+
+        .footer {
+            width: 1440px; 
+            padding-left: 525px; 
+            padding-right: 523px; 
+            padding-top: 8px; 
+            padding-bottom: 8px; 
+            margin-top: -15px;
+            background: #1B0038; 
+            overflow: hidden; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 10px; 
+            display: inline-flex;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.71); 
+            font-size: 16px; 
+            font-family: 'Karla', sans-serif; 
+            font-weight: 700; 
+            letter-spacing: 0.64px; 
+            word-wrap: break-word;
+        }
+        /* Gradiente animado */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Aplica o efeito de levantar e animar gradiente no hover */
+        .action-card:hover {
+            transform: translateY(-8px);
+            transition: transform 0.1s ease;
+        }
+
+        /* Animação de gradiente no fundo */
+        .action-card:hover .action-card-bg-1,
+        .action-card:hover .action-card-bg-2,
+        .action-card:hover .action-card-bg-3,
+        .action-card:hover .action-card-bg-4 {
+            background: linear-gradient(270deg, #faaa3b, #F44680, #931CE2E5);
+            background-size: 600% 600%;
+            animation: gradientAnimation 4s ease infinite;
+            transition: background 0.3s ease;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@500&family=Karla:wght@400;500;700&family=Yaldevi:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/yaldevi-colombo" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="header">
+                <div class="logo-container">
+                    <div class="logo-text">Lab Maker</div>
+                </div>
+                <div class="nav">
+                    <div class="nav-link nav-link-about">Sobre<br/></div>
+                    <div class="nav-link nav-link-contact">Fale conosco</div>
+                    <a href="src/html/login.html">
+                        <div class="admin-button">
+                            <div class="admin-button-text"> Admin</div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="content-section">
+                <div class="actions-container">
+                    <div class="actions-title">O QUE QUER FAZER HOJE?</div>
+                    <div class="actions-grid">
+                        <div class="action-card action-card-1">
+                            <a href="src/html/guardarprojetos.html">
+                            <div class="action-card-bg-1"></div>
+                            <div class="action-card-content-1">
+                                <img class="action-card-img-1" src="src/img/guardar_projetos.png" />
+                                 <div class="action-card-text">Guardar Projetos</div>
+                               
+                            </div>
+                            </a>
+                        </div>
+                        <div class="action-card action-card-2">
+                            <a href="src/html/SolicitarChromebook.html">
+                            <div class="action-card-bg-2"></div>
+                            <div class="action-card-content-2">
+                                <img class="action-card-img-2" src="src/img/chromebook.png" />
+                                
+                                    <div class="action-card-text action-card-text-2">Solicitar ChromeBook</div>
+                                
+                                
+                            </div>
+                            </a>
+                        </div>
+                        <div class="action-card action-card-3">
+                            <a href="src/html/CatalogoMateriais.html">
+                            <div class="action-card-bg-3"></div>
+                            <div class="action-card-content-3">
+                                <img class="action-card-img-3" src="src/img/Catalogo.png" />
+                                
+                                  <div class="action-card-text">Catálogo Materiais</div>  
+                              
+                                
+                            </div>
+                              </a>
+                        </div>
+                        <div class="action-card action-card-4">
+                            <a href="src/html/PedidosMaker.html">
+                            <div class="action-card-bg-4"></div>
+                            <div class="action-card-content-4">
+                                <img class="action-card-img-4" src="src/img/pedidos.png" />
+                                
+                                    <div class="action-card-text">Pedidos Maker</div>
+                                
+                                
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <div class="image-background">
+                        <div class="blur-circle-1"></div>
+                        <div class="blur-circle-2"></div>
+                        <div class="blur-circle-3"></div>
+                        <img class="main-image" src="src/img/Untitled design (11) 1.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-text">Todos os direitos reservados ao Lab Maker</div>
+        </div>
+    </div>
+   
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+        import { getFirestore } from "firebase/firestore";
+        import { getAuth } from "firebase/auth";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDcvVQd5awwvU4Yr-rZXRwRCn4A2up1OhA",
+            authDomain: "labmaker-website.firebaseapp.com",
+            projectId: "labmaker-website",
+            storageBucket: "labmaker-website.firebasestorage.app",
+            messagingSenderId: "895288603690",
+            appId: "1:895288603690:web:ea6f73bdaede4e7bb57f53",
+            measurementId: "G-1NHKWZRC1P"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
